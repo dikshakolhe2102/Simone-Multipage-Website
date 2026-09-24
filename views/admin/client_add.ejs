@@ -1,0 +1,44 @@
+<%- include('header.ejs'); %>
+      <div class="main">
+        <header class="topbar">
+          <h2>Add Client Record</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>Client form</h3>
+
+            <form class="form" action="/admin/client_save" method="post" enctype="multipart/form-data">
+              <div class="row">
+                <div class="field">
+                  <label for="c_img">Client Image</label>
+                  <input id="c_img" type="file" name="c_img" />
+                </div>
+                <div class="field">
+                  <label for="text">Client Name</label>
+                  <input id="text" type="text" name="c_name" placeholder="Client Name" />
+                </div>
+              </div>
+
+
+              <div class="field">
+                <label for="notes">Client Profession</label>
+                <input id="notes" name="c_pro" placeholder="Client Profession"/>
+              </div>
+
+              <div class="field">
+                <label for="notes">Client Description</label>
+                <textarea id="notes" name="c_desc" placeholder="Short note..."></textarea>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="submit">Save</button>
+                <button class="btn btn-ghost" type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+<%- include('footer.ejs'); %>

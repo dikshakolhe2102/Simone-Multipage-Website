@@ -1,0 +1,41 @@
+<%- include('header.ejs'); %>
+<section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-bg-title">Contact</div>
+          <h2 class="section-title">Get in Touch</h2>
+        </div>
+        <div class="contact-grid contact">
+          <div>
+            <% for(var i=0; i<data.length; i++){ %>
+            <h3>Address</h3>
+            <p><%= data[i].c_add %></p>
+            <ul class="contact-list">
+              <li><%= data[i].c_mob %></li>
+              <li><%= data[i].c_mob %></li>
+              <li><a href="<%= data[i].c_email %>"><%= data[i].c_email %></a></li>
+            </ul>
+            <h3>Follow Me</h3>
+            <div class="social-row">
+              <a href="#" aria-label="Dribbble"><%= data[i].c_fb %></a>
+              <a href="#" aria-label="Twitter"><%= data[i].c_insta %></a>
+              <a href="#" aria-label="Facebook"><%= data[i].c_yt %></a>
+              <a href="#" aria-label="GitHub"><%= data[i].c_tw %></a>
+            </div>
+            <% } %>
+          </div>
+          <div>
+            <h3>Send us a note</h3>
+            <form class="form" action="/contact_save" method="post">
+              <div class="form-row">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+              </div>
+              <textarea name="message" placeholder="Tell us more about your needs........" required></textarea>
+              <button class="btn " type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+<%- include('footer.ejs'); %>

@@ -1,0 +1,40 @@
+<%- include('header.ejs'); %>
+
+    <div class="main">
+        <header class="topbar">
+        <h2>Contact table</h2>
+        <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+        <div class="panel">
+            <h3>All users</h3>
+
+            <table>
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Date</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i<data.length; i++){ %>
+                <tr>
+                <td><%= i+1 %></td>
+                <td><%= data[i].name %></td>
+                <td><%= data[i].email %></td>
+                <td><%= data[i].message %></td>
+                <td><%= data[i].cdate %></td>
+                </tr>
+                <% } %>
+            </tbody>
+            </table>
+        </div>
+        </section>
+    </div>
+    </div>
+<%- include('footer.ejs'); %>

@@ -1,0 +1,22 @@
+<%- include('header.ejs'); %>
+<section class="section" id="clients">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-bg-title">Testimonial</div>
+          <h2 class="section-title">Client Speak</h2>
+        </div>
+        <div class="testimonials">
+          <% for(var i=0;i<data.length;i++) { %>
+          <blockquote class="quote">
+            <p><%= data[i].c_desc %></p>
+            <div class="person">
+              <img src="/image/<%= data[i].c_img %>" alt="Dennis" />
+              <div><strong><%= data[i].c_name %></strong><span><%= data[i].c_pro %></span></div>
+            </div>
+          </blockquote>
+          <% } %>
+        </div>
+      </div>
+    </section>
+
+<%- include('footer.ejs'); %>

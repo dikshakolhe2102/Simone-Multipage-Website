@@ -1,0 +1,53 @@
+<%- include('header.ejs'); %>
+    <div class="main">
+        <header class="topbar">
+        <h2>Add Contact Record</h2>
+        <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+        <div class="panel">
+            <h3>Skill form</h3>
+
+            <form class="form" action="/admin/contact_save" method="post">
+            <div class="row">
+                <div class="field">
+                <label for="name">Contact Address</label>
+                <input id="name" type="text" name="c_add" placeholder="Contact Address" />
+                </div>
+                <div class="field">
+                <label for="text">Contact Mobile</label>
+                <input id="text" type="text" name="c_mob" placeholder="Contact Mobile" />
+                </div>
+                <div class="field">
+                <label for="text">Contact Email</label>
+                <input id="text" type="text" name="e_email" placeholder="Contact Email" />
+                </div>
+                <div class="field">
+                <label for="text">Contact Facebook</label>
+                <input id="text" type="text" name="c_fb" placeholder="Contact Facebook" />
+                </div>
+                <div class="field">
+                <label for="text">Contact Instagram</label>
+                <input id="text" type="text" name="c_insta" placeholder="Contact Instagram" />
+                </div>
+                <div class="field">
+                <label for="text">Contact Youtube</label>
+                <input id="text" type="text" name="c_yt" placeholder="Contact Youtube" />
+                </div>
+                <div class="field">
+                <label for="text">Contact Twitter</label>
+                <input id="text" type="text" name="c_tw" placeholder="Contact Twitter" />
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="btn" type="submit">Save</button>
+                <button class="btn btn-ghost" type="reset">Clear</button>
+            </div>
+            </form>
+        </div>
+        </section>
+    </div>
+    </div>
+<%- include('footer.ejs'); %>

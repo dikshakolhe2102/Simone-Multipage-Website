@@ -1,0 +1,48 @@
+<%- include('header.ejs'); %>
+
+    <div class="main">
+        <header class="topbar">
+        <h2>Client table</h2>
+        <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+        <div class="panel">
+            <h3>All users</h3>
+
+            <table>
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Client Image</th>
+                <th>Client Name</th>
+                <th>Client Profession</th>
+                <th>Client Description</th>
+                <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i<data.length; i++){ %>
+                <tr>
+                <td><%= i+1 %></td>
+                <td>
+                    <img src="/image/<%= data[i].c_img %>" height="100px" />
+                </td>
+                <td><%= data[i].c_name %></td>
+                <td><%= data[i].c_pro %></td>
+                <td><%= data[i].c_desc %></td>
+                <td>
+                    <a href="/admin/delete_client/<%= data[i].cid %>/<%= encodeURIComponent(data[i].c_img) %>">
+                        <button class="badge badge-ok">Delete</button>
+                    </a>
+                    <span class="badge badge-ok">Edit</span>
+                </td>
+                </tr>
+                <% } %>
+            </tbody>
+            </table>
+        </div>
+        </section>
+    </div>
+    </div>
+<%- include('footer.ejs'); %>

@@ -1,0 +1,52 @@
+<%- include('header.ejs'); %>
+
+    <div class="main">
+        <header class="topbar">
+        <h2>Skill table</h2>
+        <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+        <div class="panel">
+            <h3>All users</h3>
+
+            <table>
+            <thead>
+                <tr>
+                <th>ID</th>
+                <th>Contact Address</th>
+                <th>Contact Mobile</th>
+                <th>Contact Email</th>
+                <th>Contact facebook</th>
+                <th>Contact Instagram</th>
+                <th>Contact YouTube</th>
+                <th>Contact twiter</th>
+                <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i<data.length; i++){ %>
+                <tr>
+                <td><%= i+1 %></td>
+                <td><%= data[i].c_add %></td>
+                <td><%= data[i].c_mob %></td>
+                <td><%= data[i].c_email %></td>
+                <td><%= data[i].c_fb %></td>
+                <td><%= data[i].c_insta %></td>
+                <td><%= data[i].c_yt %></td>
+                <td><%= data[i].c_tw %></td>
+                <td>
+                    <a href="/admin/contact_delete/<%= data[i].cid %>">
+                        <button class="badge badge-ok">Delete</button>
+                    </a>
+                    <span class="badge badge-ok">Edit</span>
+                </td>
+                </tr>
+                <% } %>
+            </tbody>
+            </table>
+        </div>
+        </section>
+    </div>
+    </div>
+<%- include('footer.ejs'); %>

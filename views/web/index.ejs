@@ -1,0 +1,16 @@
+<%- include('header.ejs'); %>
+    <section class="hero" id="home" style="background-image:url('/image/<%=data.h_img%>') !important; background-size: cover; ">
+      <div class="hero__social" aria-label="Social links">
+        <a href="#" aria-label="Twitter">Tw</a>
+        <a href="#" aria-label="Facebook">Fb</a>
+        <a href="#" aria-label="Dribbble">Dr</a>
+        <a href="#" aria-label="GitHub">Gh</a>
+      </div>
+      <div>
+        <h1>I'm <span id="typed"><%=data.h_title1%></span></h1>
+        <p><%=data.h_desc%></p>
+      </div>
+      <a class="scroll-hint" href="/about" aria-label="Scroll to about"></a>
+    </section>
+
+<%- include('footer.ejs'); %>

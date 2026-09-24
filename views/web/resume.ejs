@@ -1,0 +1,44 @@
+<%- include('header.ejs'); %>
+<section class="section" id="resume">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-bg-title">Summary</div>
+          <h2 class="section-title">Resume</h2>
+        </div>
+        <div class="resume-cols">
+          <div>
+            <h3>My Education</h3>
+            <% for(var i=0;i<data.length;i++) { %>
+            <article class="timeline-card">
+              <span class="badge"><%= data[i].e_year %></span>
+              <h4><%= data[i].e_name %></h4>
+              <div class="place"><%= data[i].e_uni %></div>
+              <p><%= data[i].s_desc %></p>
+            </article>
+            <% } %>
+          </div>
+          <div>
+            <h3>My Experience</h3>
+            <% for(var i=0;i<data1.length;i++) { %>
+            <article class="timeline-card">
+              <span class="badge"><%= data1[i].e_year %></span>
+              <h4><%= data1[i].e_name %></h4>
+              <div class="place"><%= data1[i].e_uni %></div>
+              <p><%= data1[i].s_desc %></p>
+            </article>
+            <% } %>
+          </div>
+        </div>
+        <div class="skills">
+          <h3>My Skills</h3>
+          <div class="skills-grid">
+            <% for(var i=0;i<data2.length;i++) { %>
+            <div class="skill">
+              <header><span><%= data2[i].skill_n %></span><span><%= data2[i].skill_p %></span></header>
+              <div class="bar"><span style="width: <%= data2[i].skill_p %>%"></span></div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </section>
+<%- include('footer.ejs'); %>

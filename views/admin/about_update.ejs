@@ -1,0 +1,94 @@
+<%- include('header.ejs'); %>
+    <div class="main">
+        <header class="topbar">
+        <h2>Add About Update Record</h2>
+        <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+        <div class="panel">
+            <h3>About Update form</h3>
+
+            <form class="form" action="/admin/about_update_save/<%=data.aid%>" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="field">
+                <label for="name">About Title</label>
+                <input id="name" type="text" name="a_title" value="<%=data.a_title%>" placeholder="Title..."/>
+                </div>
+
+                <div class="field">
+                <label for="text">About Name</label>
+                <input id="text" type="text" name="a_name" value="<%=data.a_name%>" placeholder="Name" />
+                </div>
+
+                <div class="field">
+                <label for="text">About Email</label>
+                <input id="text" type="text" name="a_email" value="<%=data.a_email%>" placeholder="Email" />
+                </div>
+
+                <div class="field">
+                <label for="text">About Age</label>
+                <input id="text" type="text" name="a_age" value="<%=data.a_age%>" placeholder="Age" />
+                </div>
+
+                <div class="field">
+                <label for="text">About address</label>
+                <textarea id="text" name="a_add" placeholder="Address..."><%=data.a_add%></textarea>
+                </div>
+
+                <div class="field">
+                <label for="text">About Count Title1</label>
+                <input id="text" type="text" name="a_ctitle1" value="<%=data.a_ctitle1%>" placeholder="Count Title1" />
+                </div>
+
+                <div class="field">
+                <label for="text">About Count No1</label>
+                <input id="text" type="text" name="a_count1" value="<%=data.a_count1%>" placeholder="Count1" />
+                </div>
+
+                <div class="field">
+                <label for="text">About Count Title2</label>
+                <input id="text" type="text" name="a_ctitle2" value="<%=data.a_ctitle2%>" placeholder="Count Title2" />
+                </div>
+
+                <div class="field">
+                <label for="text">About Count No2</label>
+                <input id="text" type="text" name="a_count2" value="<%=data.a_count2%>" placeholder="Count2" />
+                </div>
+
+                <div class="field">
+                <label for="text">About Count Title3</label>
+                <input id="text" type="text" name="a_ctitle3" value="<%=data.a_ctitle3%>" placeholder="Count Title3" />
+                </div>
+
+                <div class="field">
+                <label for="text">About Count No3</label>
+                <input id="text" type="text" name="a_count3" value="<%=data.a_count3%>" placeholder="Count3" />
+                </div>
+
+                <div class="field">
+                <label for="text">About Count Title4</label>
+                <input id="text" type="text" name="a_ctitle4" value="<%=data.a_ctitle4%>" placeholder="Count Title4" />
+                </div>
+
+                <div class="field">
+                <label for="text">About Count No4</label>
+                <input id="text" type="text" name="a_count4" value="<%=data.a_count4%>" placeholder="Count4" />
+                </div>
+
+                <div class="field">
+                    <label for="notes">About Description</label>
+                    <textarea id="notes" name="a_desc" placeholder="Short note..."><%=data.a_desc%></textarea>
+                </div>
+
+                <div class="actions">
+                    <button class="btn" type="submit">Update</button>
+                    <button class="btn btn-ghost" type="reset">Clear</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        </section>
+    </div>
+    </div>
+<%- include('footer.ejs'); %>
