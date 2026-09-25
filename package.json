@@ -6,5 +6,8 @@
     "express-session": "^1.19.0",
     "mysql2": "^3.24.4",
     "util": "^0.12.5"
+  },
+  "scripts":{
+    "start":"node server.js"
   }
 }
